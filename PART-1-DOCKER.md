@@ -119,34 +119,34 @@ Hands-on practice quest #00: prerequisites sound-check (15+5)
 ``` 
 
 - [ ] When участники *именуют сценарии*, выполняют команды и анализируют их вывод и поведение
-- Сценарий "Как ...?"
+- Сценарий "Как посмотреть окружение (версию, окружение, папки, диски)?"
 ```shell
 docker version # TODO: собственные пометки участников для будущего использования в проектах
 docker system info
 docker system df
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как подключиться к docker-registry?"
 ```shell
 docker logout
-docker login {{ registry-host }}
+docker login artifactory.raiffeisen.ru
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как скачать docker образ?"
 ```shell
-docker image pull {{ os-registry }}/alpine:3.14
+docker image pull artifactory.raiffeisen.ru/ext-rbru-osimage-docker/alpine:3.14
 docker system df
 ````
 
-- Сценарий "Как ...?"
+- Сценарий "Как запустить контейнер?"
 ```shell
 docker container ls [--all]
-docker container run --name demo -it {{ os-registry }}/alpine:3.14
+docker container run --name demo -it artifactory.raiffeisen.ru/ext-rbru-osimage-docker/alpine:3.14
 /# cat /etc/os-release
 /# exit 
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как посмотреть список контейнеров/удалить контейнер?"
 ```shell
 docker container ls [--all]
 docker container rm [--force] demo
