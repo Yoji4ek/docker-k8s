@@ -9,12 +9,12 @@ Prerequisites
 - [ ] Права локального админа для аккаунта участника {{ account }}
 - [ ] Доступен git repo с данным руководством {{ git-repo }} `gitlabci.raiffeisen.ru/container-trainings/training-docker`
 - [ ] Доступен корпоративный Docker {{ registry-host }} `artifactory.raiffeisen.ru`
-- [ ] Доступен корпоративный Docker {{ soft-registry }} с образами прикладного ПО `{{ registry-host }}/ext-rbru-techimage-docker`
-- [ ] Доступен корпоративный Docker {{ os-registry }} с образами ОС `{{ registry-host }}/ext-rbru-osimage-docker`
-- [ ] Доступен корпоративный Docker {{ project-registry }} учебного проекта `{{ registry-host }}/container-training-docker`
-- [ ] Доступен дистрибутив рабочего приложения {{ app-distr }} `{{ registry-host }}/artifactory/container-training-docker/dbo-1.0-SNAPSHOT.jar`
-- [ ] Доступен исходный проект рабочего приложения {{ app-src }} `{{ registry-host }}/artifactory/container-training-docker/dbo-1.0-SNAPSHOT-sources.jar`
-- [ ] Доступен необходимый компонент рабочего приложения {{ app-stub }} `{{ registry-host }}/artifactory/repo1-cache/com/github/tomakehurst/wiremock-standalone/2.27.2/wiremock-standalone-2.27.2.jar`
+- [ ] Доступен корпоративный Docker {{ soft-registry }} с образами прикладного ПО `artifactory.raiffeisen.ru/ext-rbru-techimage-docker`
+- [ ] Доступен корпоративный Docker {{ os-registry }} с образами ОС `artifactory.raiffeisen.ru/ext-rbru-osimage-docker`
+- [ ] Доступен корпоративный Docker {{ project-registry }} учебного проекта `artifactory.raiffeisen.ru/container-training-docker`
+- [ ] Доступен дистрибутив рабочего приложения {{ app-distr }} `artifactory.raiffeisen.ru/artifactory/container-training-docker/dbo-1.0-SNAPSHOT.jar`
+- [ ] Доступен исходный проект рабочего приложения {{ app-src }} `artifactory.raiffeisen.ru/artifactory/container-training-docker/dbo-1.0-SNAPSHOT-sources.jar`
+- [ ] Доступен необходимый компонент рабочего приложения {{ app-stub }} `artifactory.raiffeisen.ru/artifactory/repo1-cache/com/github/tomakehurst/wiremock-standalone/2.27.2/wiremock-standalone-2.27.2.jar`
 - [ ] Установлен DockerCE или совместимый менеджер контейнеров (e.g. Podman)
 ```shell
 sudo dnf install -y docker
