@@ -268,37 +268,37 @@ docker image ls # TODO: собственные пометки участнико
 
 - Сценарий "Как ...?"
 ```shell
-docker image pull {{ os-registry }}/alpine:3.14
+docker image pull artifactory.raiffeisen.ru/ext-rbru-osimage-docker/alpine:3.14
 docker image ls
 ```
 
 - Сценарий "Как ...?"
 ```shell
-docker image history {{ os-registry }}/alpine:3.14
+docker image history artifactory.raiffeisen.ru/ext-rbru-osimage-docker/alpine:3.14
 
-docker image inspect {{ os-registry }}/alpine:3.14
-docker image inspect --format='{{.Id}} -> {{.Parent}}' {{ os-registry }}/alpine:3.14
+docker image inspect artifactory.raiffeisen.ru/ext-rbru-osimage-docker/alpine:3.14
+docker image inspect --format='{{.Id}} -> {{.Parent}}' artifactory.raiffeisen.ru/ext-rbru-osimage-docker/alpine:3.14
 ```
 
 - Сценарий "Как ...?"
 ```shell
-docker container run --name demo -it {{ os-registry }}/alpine:3.14
+docker container run --name demo -it artifactory.raiffeisen.ru/ext-rbru-osimage-docker/alpine:3.14
 /# touch side-effect.txt
 /# exit
 docker container diff demo
-docker container commit demo {{ project-registry }}/{{account}}/demo
+docker container commit demo artifactory.raiffeisen.ru/container-training-docker/{{account}}/demo
 docker image ls
 ```
 
 - Сценарий "Как ...?"
 ```shell
-docker image tag {{ project-registry }}/{{account}}/demo:latest {{ project-registry }}/{{account}}/demo:1.0.0
+docker image tag artifactory.raiffeisen.ru/container-training-docker/{{account}}/demo:latest artifactory.raiffeisen.ru/container-training-docker/{{account}}/demo:1.0.0
 docker image ls
 ```
 
 - Сценарий "Как ...?"
 ```shell
-docker image push {{ project-registry }}/{{account}}/demo:1.0.0
+docker image push artifactory.raiffeisen.ru/container-training-docker/{{account}}/demo:1.0.0
 ```
 
 - Сценарий "Как ...?"
@@ -307,9 +307,9 @@ docker image ls
 docker container rm demo
 docker image prune
 docker image ls
-docker image rm {{ project-registry }}/{{account}}/demo:1.0.0
+docker image rm artifactory.raiffeisen.ru/container-training-docker/{{account}}/demo:1.0.0
 docker image ls
-docker image rm {{ project-registry }}/{{account}}/demo:latest
+docker image rm artifactory.raiffeisen.ru/container-training-docker/{{account}}/demo:latest
 docker image ls
 docker image prune --all
 ```
