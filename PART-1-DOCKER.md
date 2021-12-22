@@ -376,14 +376,14 @@ docker container ls --format '{{.ID}} | {{.Names}} | {{.Status}} | {{.Image}}'
 
 - Сценарий "Как запустить 'одноразовый' контейнер?"
 ```shell
-docker container run --rm -it {{ os-registry }}/alpine:3.14 # note `--rm`
+docker container run --rm -it artifactory.raiffeisen.ru/ext-rbru-osimage-docker/alpine:3.14 # note `--rm`
 /# exit
 docker container ls
 ```
 
 - Сценарий "Как запустить контейнер в фоновом режиме?"
 ```shell
-docker container run --detach --name proxy --publish 80:80 {{ soft-registry }}/nginx:1.19.4 # note `--detach`
+docker container run --detach --name proxy --publish 80:80 artifactory.raiffeisen.ru/ext-rbru-techimage-docker/nginx:1.19.4 # note `--detach`
 docker container ls
 curl localhost:80
 ```
